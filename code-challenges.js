@@ -72,7 +72,13 @@ const myNumbers2 = [8, -7, 42, 9, 13]
 
 const currentCohort = "Charlie 2022"
 
-   
+const reverseString = (string) => {
+    
+    return string.split('').reverse().join('')
+};
+
+console.log(reverseString(currentCohort))
+
 
 
     
