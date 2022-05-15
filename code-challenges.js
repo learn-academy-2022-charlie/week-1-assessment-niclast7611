@@ -23,32 +23,32 @@ const temp3 = 212
 
 //Create a function named boilingPoint 
     //It will take a number argument named temp 
-        //this will allow us to compare this number to boiling point determining if it is below above or at boiling point 
-    // we need to create a conditional allowing the computer to make decisions hense forth a decision tree 
+        //this will allow us to compare this number to boiling point determining if it is below, above, or at boiling point 
+    // we need to create a conditional allowing the computer to make decisions hense forth why its called a decision tree 
         //if the temp > 212F 
-            //return `${temp} is above boiling point!`
-        //else if allowing us to give another condition. is the temp === 212F
-            // return `${temp} is at boiling point!`
-        // else giving us a catch all for all other numbers lower than 212
-            //return `${temp} is below boiling point!`
-        //Call the function boilingPoint() in a console.log
+            //return `${temp}F is above boiling point!`
+        //else if allowing us to give another condition. if the temp === 212F
+            // return `${temp}F is at boiling point!`
+        // else giving us a catch all for all other numbers lower than and not equal to 212
+            //return `${temp}F is below boiling point!`
+        //Call the function boilingPoint() with an argument in the console.log
     
     const boilingPoint = (temp) => {
         if(temp > 212){
-            return `${temp} is above boiling point!`
+            return `${temp}F is above boiling point!`
         } else if (temp === 212){
-            return `${temp} is at boiling point!`
+            return `${temp}F is at boiling point!`
         } else {
-            return `${temp} is below boiling point!`
+            return `${temp}F is below boiling point!`
         }
     }
             console.log(boilingPoint(temp1))
             console.log(boilingPoint(temp2))
             console.log(boilingPoint(temp3))
 
-                //Output ---> 42 is below boiling point
-                //Output ---> 350 is above boiling point
-                //Output ---> 212 is at boiling point 
+                //Output ---> 42F is below boiling point
+                //Output ---> 350F is above boiling point
+                //Output ---> 212F is at boiling point 
                 //Also tried with several other numbers all were represented with expected outputs 
 
 
@@ -72,15 +72,33 @@ const myNumbers2 = [8, -7, 42, 9, 13]
 
 const currentCohort = "Charlie 2022"
 
+    //Create a function with arrow syntax to cycle through any string and reverse the order of the letters
+        //Make a function named reverseString with one argument named string 
+            //This will only work if the user inputs a string
+        //We need to split the string into an array using .split(' ') in order to reverse it 
+            // "hi" --> ["h", "i"]
+            // I assigned the split string to a varriable called splitString
+        //We then need to reverse the order of the array using .reverse()
+            // ["h", "i"] ---> ["i", "h"]
+            //I assigned the reversed array to a new variable named reverseArray
+        //We then need to transform that array back to a string 
+            // ["i", "h"] ---> "ih"
+            // In order to do this I assigned the reversed array to a variable called joinedString 
+        //Finally return joinedString
+        //And console.log(reverseString(currentCohort))
+
 const reverseString = (string) => {
-    
-    return string.split('').reverse().join('')
-};
+
+    var splitString = string.split('')
+    var reverseArray = splitString.reverse()
+    var joinedString = reverseArray.join('')
+    return joinedString
+}
 
 console.log(reverseString(currentCohort))
 
-
-
+//      Output ---> "2202 eilrahC"
+//      I also tried an actual string instead of a variable and it also worked
     
 
 
@@ -92,10 +110,9 @@ const myArray = [13, 34, 5, 10, 27, 42]
 
     // In order to go through each index of the array i created a for loop
         // I iterated the loop by having i=0, having it run till i has gone through every index of myArray, and i++ which allows it to keep advancing 
-    // we have the means of getting through the array but we decide if its even or odd through a decision tree or an if else statement
-        // if i % which means remainder of whatever its divided by in this case 2 === 0
-            //if i divided by 2 has no remaineder then do whatever is in the code block if not move on to else 
-        // once the if statement comes back true it will log even if the if statement comes out false it will log odd
+    // we have the means of getting through the array but we need to decide if its even or odd through a decision tree or an if else statement
+        // if i % 2 === 0 which means if i divided by 2 has no remainders advance to code block 
+        // once the if statement comes back true it will log 'even' if the if statement comes out false it will log 'odd'
 
 for(let i=0; i < myArray.length; i++){
     if(i % 2 === 0){
